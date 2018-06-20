@@ -19,13 +19,15 @@ class LocalstackConfig {
 
     @Bean
     fun amazonSNS(): AmazonSNS = AmazonSNSClientBuilder.standard()
-            .withEndpointConfiguration(AwsClientBuilder.EndpointConfiguration("http://localhost:4575", "us-east-1"))
-            .withCredentials(credentialsProvider)
+//            .withRegion("eu-west-1")
+//            .withEndpointConfiguration(AwsClientBuilder.EndpointConfiguration(null, "eu-west-1"))
+//            .withCredentials(credentialsProvider)
             .build()
 
     @Bean
     fun amazonSQS(): AmazonSQS = AmazonSQSAsyncClientBuilder.standard()
-            .withEndpointConfiguration(AwsClientBuilder.EndpointConfiguration("http://localhost:4576", "us-east-1"))
-            .withCredentials(credentialsProvider)
+//            .with
+//            .withEndpointConfiguration(AwsClientBuilder.EndpointConfiguration(null, "eu-west-1"))
+//            .withCredentials(credentialsProvider)
             .build()
 }
